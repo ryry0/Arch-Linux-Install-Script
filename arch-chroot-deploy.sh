@@ -7,6 +7,7 @@ echo LANG=en_US.UTF-8 > /etc/locale.conf
 export LANG=en_US.UTF-8
 mkinitcpio -p linux
 systemctl enable dhcpcd@enp2s0.service
+pacman  -S grub os-prober --noconfirm
 grub-install --target=i386-pc --recheck /dev/sdd
 grub-mkconfig -o /boot/grub/grub.cfg
 pacman -S xorg-server git vim-minimal --noconfirm
