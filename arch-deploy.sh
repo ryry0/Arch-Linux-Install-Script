@@ -7,4 +7,4 @@ reflector --verbose --country 'United States' -p http -l 20 --sort rate --save /
 pacstrap -i /mnt base base-devel
 genfstab -p /mnt >> /mnt/etc/fstab
 cp arch-chroot-deploy.sh /mnt
-arch-chroot /mnt arch-chroot-deploy.sh
+arch-chroot /mnt /bin/bash arch-chroot-deploy.sh
